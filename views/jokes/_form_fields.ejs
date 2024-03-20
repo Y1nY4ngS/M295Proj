@@ -1,0 +1,18 @@
+<div class="form-row">
+  <div class="form-item">
+    <label>Joke</label>
+    <input type="text" name="jokeString" value="<%= joke.jokeString %>">
+  </div>
+  <div class="form-item">
+    <label>Author</label>
+    <select name="author">
+      <% authors.forEach(author => { %>
+        <% if (author.id === joke.author) { %>
+          <option selected label="<%= author.name %>" value="<%= author.id %>">
+        <% } else { %>
+          <option label="<%= author.name %>" value="<%= author.id %>">
+        <% } %>
+      <% }) %>
+    </select>
+  </div>
+</div>

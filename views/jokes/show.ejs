@@ -1,0 +1,12 @@
+<h2 class="page-header"><%= joke.jokeString %></h2>
+<div class="joke-details">
+    <div class="joke-details-btn-grid">
+      <a class="btn btn-primary" href="/jokes/<%= joke.id %>/edit">Edit</a>
+      <%- include('../partials/deleteForm', { url: `/jokes/${joke.id}` }) %>
+      <a class="btn btn-primary joke-details-author-button" href="/authors/<%= joke.author.id %>">View Author</a>
+    </div>
+  <div class="joke-details-grid">
+    <div class="joke-details-label">Author:</div>
+    <div><%= joke.author.name %></div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+:root {
+  --joke-cover-width: 200px;
+  --joke-cover-width-large: 325px;
+  --joke-cover-aspect-ratio: 0.75;
+}
+
+.joke-cover {
+  width: var(--joke-cover-width);
+  height: calc(var(--joke-cover-width) / var(--joke-cover-aspect-ratio));
+}
+
+.joke-cover-large {
+  --joke-cover-width: var(--joke-cover-width-large);
+}
+
+.joke-grid {
+  display: grid;
+  justify-content: center;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fill, var(--joke-cover-width));
+}
+
+.joke-grid-large {
+  grid-template-columns: repeat(auto-fill, var(--joke-cover-width-large));
+}
+
+.joke-details {
+  display: flex;
+}
+
+.joke-details-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  align-self: flex-start;
+}
+
+.joke-details-grid {
+  display: grid;
+  align-content: flex-start;
+  align-items: center;
+  grid-gap: 1rem;
+  grid-template-columns: auto auto;
+}
+
+.joke-details-btn-grid {
+  display: grid;
+  justify-items: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  grid-template-areas:
+    "edit delete"
+    "author author";
+  grid-gap: .5rem;
+  margin-top: .5rem;
+}
+
+.joke-details-author-button {
+  grid-area: author;
+  justify-self: stretch;
+}

@@ -1,0 +1,13 @@
+<h2 class="page-header">Search Joke</h2>
+<form action="/jokes" method="GET">
+  <div class="form-row">
+    <div class="form-item">
+      <label>Joke</label>
+      <input type="text" name="jokeString" value="<%= searchOptions.jokeString %>">
+    </div>
+  </div>
+  <div class="form-row form-row-end">
+    <button class="btn btn-primary" type="submit">Search</button>
+  </div>
+</form>
+<br>
